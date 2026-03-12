@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>संस्कार कन्या संस्कृति होस्टल - टीकमगढ़</title>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #FF6B00;
+    --deep-orange: #E85000;
+    --gold: #FFB800;
+    --dark-green: #1A5C2A;
+    --light-green: #2E8B4A;
+    --cream: #FFF8EE;
+    --dark: #1A1200;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(135deg, var(--dark-green) 0%, #0d3d1a 50%, var(--dark-green) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .top-bar {
+    background: var(--saffron);
+    text-align: center;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  .header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    box-shadow: 0 4px 20px rgba(255,184,0,0.4);
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(255,184,0,0.4); }
+    50% { box-shadow: 0 4px 40px rgba(255,184,0,0.8); }
+  }
+
+  .logo-text h1 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 38px;
+    color: var(--gold);
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .logo-text p {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    margin-top: 4px;
+    letter-spacing: 2px;
+  }
+
+  .header-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .badge {
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    color: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(255,107,0,0.4);
+    animation: slideIn 0.8s ease forwards;
+  }
+
+  .badge.green {
+    background: linear-gradient(135deg, var(--light-green), var(--dark-green));
+    box-shadow: 0 4px 15px rgba(46,139,74,0.4);
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 16px 28px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; right: 50%;
+    height: 3px;
+    background: var(--gold);
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover { color: var(--gold); }
+  nav ul li a:hover::after { left: 0; right: 0; }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, #FF6B00 0%, #E85000 40%, #c44000 100%);
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '🏫';
+    font-size: 300px;
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    opacity: 0.08;
+    line-height: 1;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: white;
+    color: var(--saffron);
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .hero h2 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 52px;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  .hero p {
+    font-size: 20px;
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    animation: fadeUp 1s ease forwards;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 1.2s ease forwards;
+  }
+
+  .btn {
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--saffron);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+  }
+
+  .btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .btn-outline:hover {
+    background: white;
+    color: var(--saffron);
+    transform: translateY(-3px);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    background: var(--dark-green);
+    padding: 50px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .stat-item {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* ===== SECTION COMMON ===== */
+  section {
+    padding: 80px 60px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title .tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--saffron), var(--gold));
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .section-title h2 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 40px;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+  }
+
+  .section-title p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold));
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ===== FEATURES ===== */
+  .features { background: var(--cream); }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .feature-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+    border: 1px solid rgba(255,107,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+  .feature-card:hover::before { transform: scaleX(1); }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FFF3E8, #FFE4CC);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .feature-card h3 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 20px;
+    color: var(--dark-green);
+    margin-bottom: 12px;
+  }
+
+  .feature-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  /* ===== ADMISSION ===== */
+  .admission {
+    background: linear-gradient(135deg, var(--dark-green), #0d3d1a);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .admission::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(255,184,0,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .admission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .admission h2 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .admission p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .admission-points {
+    list-style: none;
+    margin-bottom: 35px;
+  }
+
+  .admission-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+  }
+
+  .admission-points li::before {
+    content: '✓';
+    min-width: 26px;
+    height: 26px;
+    background: var(--gold);
+    color: var(--dark-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .admission-card {
+    background: white;
+    border-radius: 25px;
+    padding: 45px 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  .admission-card .open-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #28a745, #1a7a32);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .admission-card h3 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 24px;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+  }
+
+  .admission-card .class-range {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--saffron);
+    margin: 15px 0;
+    line-height: 1;
+  }
+
+  .admission-card .medium {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .phone-big {
+    background: linear-gradient(135deg, var(--saffron), var(--deep-orange));
+    color: white;
+    padding: 18px 30px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+
+  .phone-big:hover { transform: scale(1.05); }
+
+  /* ===== FREE FACILITIES ===== */
+  .facilities { background: #f9f5ee; }
+
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+
+  .facility-item {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+  }
+
+  .facility-item:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--saffron);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  }
+
+  .facility-item .fi-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .facility-item h3 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 18px;
+    color: var(--dark-green);
+    margin-bottom: 8px;
+  }
+
+  .facility-item p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.5;
+  }
+
+  /* ===== IMPORTANT NOTES ===== */
+  .notes {
+    background: linear-gradient(135deg, var(--saffron), #c44000);
+    padding: 60px;
+    text-align: center;
+    color: white;
+  }
+
+  .notes h2 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: white;
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .note-card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+  }
+
+  .note-card:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-5px);
+  }
+
+  .note-card .note-icon { font-size: 40px; margin-bottom: 15px; display: block; }
+
+  .note-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.95);
+  }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    background: var(--dark);
+    color: white;
+    padding: 80px 60px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact h2 {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 38px;
+    color: var(--gold);
+    margin-bottom: 35px;
+  }
+
+  .contact-items { display: flex; flex-direction: column; gap: 20px; }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 25px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 15px;
+    border-left: 3px solid var(--gold);
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+  }
+
+  .contact-item .ci-icon {
+    font-size: 28px;
+    min-width: 45px;
+    height: 45px;
+    background: rgba(255,184,0,0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-item .ci-text strong {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .contact-item .ci-text span {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 17px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+  }
+
+  .contact-item .ci-text a {
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .map-placeholder {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    border: 2px dashed rgba(255,184,0,0.3);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .map-placeholder .map-icon { font-size: 60px; }
+  .map-placeholder p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+  .map-placeholder strong { color: var(--gold); font-family: 'Poppins', sans-serif; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0a0800;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-top: 2px solid var(--gold);
+  }
+
+  footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  footer .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.7);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+
+  footer .social span { color: var(--gold); font-weight: 600; }
+
+  /* ===== FLOATING CTA ===== */
+  .floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+  }
+
+  .floating-cta a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+    transition: all 0.3s ease;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .floating-cta a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(37,211,102,0.6);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    header .header-main { padding: 20px 20px; flex-direction: column; gap: 20px; }
+    .logo-text h1 { font-size: 26px; }
+    nav ul { flex-wrap: wrap; }
+    nav ul li a { padding: 12px 16px; font-size: 12px; }
+    .hero { padding: 50px 20px; }
+    .hero h2 { font-size: 32px; }
+    .stats { grid-template-columns: repeat(2, 1fr); padding: 40px 20px; }
+    section { padding: 50px 20px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .admission-grid { grid-template-columns: 1fr; gap: 30px; }
+    .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+    .notes { padding: 40px 20px; }
+    .notes-grid { grid-template-columns: 1fr; }
+    .contact { padding: 50px 20px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer { padding: 20px; flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating CTA -->
+<div class="floating-cta">
+  <a href="tel:8962617340">📞 अभी कॉल करें</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="top-bar">
+    🙏 श्री गणेशाय नमः — घर से दूर लेकिन घर जैसा माहौल 🙏
+  </div>
+  <div class="header-main">
+    <div class="logo-area">
+      <div class="logo-icon">🏫</div>
+      <div class="logo-text">
+        <h1>संस्कार कन्या संस्कृति होस्टल</h1>
+        <p>जिला — टीकमगढ़ (म.प्र.)</p>
+      </div>
+    </div>
+    <div class="header-badges">
+      <div class="badge">✅ ADMISSION OPEN 2025-26</div>
+      <div class="badge green">📚 कक्षा 1 से 10 तक</div>
+    </div>
+  </div>
+</header>
+
+<!-- Nav -->
+<nav>
+  <ul>
+    <li><a href="#home">🏠 होम</a></li>
+    <li><a href="#features">⭐ विशेषताएं</a></li>
+    <li><a href="#admission">📋 प्रवेश</a></li>
+    <li><a href="#facilities">🎁 सुविधाएं</a></li>
+    <li><a href="#notes">📌 महत्वपूर्ण</a></li>
+    <li><a href="#contact">📞 संपर्क</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-tag">🌟 लड़के एवं लड़कियों के लिए</div>
+  <h2>आपके बच्चे का उज्जवल भविष्य<br>हमारी जिम्मेदारी है</h2>
+  <p>संस्कार, शिक्षा और संस्कृति — तीनों का बेहतरीन संगम। घर से दूर रहकर भी बच्चे पाएं घर जैसा प्यार और देखभाल।</p>
+  <div class="hero-btns">
+    <a href="#admission" class="btn btn-white">📋 प्रवेश के लिए जानकारी</a>
+    <a href="tel:8962617340" class="btn btn-outline">📞 8962617340</a>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">10+</div>
+    <div class="stat-label">कक्षाएं उपलब्ध</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">4×</div>
+    <div class="stat-label">दैनिक भोजन</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">सुरक्षित माहौल</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">₹0</div>
+    <div class="stat-label">गरीब बच्चों के लिए फीस</div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="features" id="features">
+  <div class="section-title">
+    <div class="tag">हमारी विशेषताएं</div>
+    <h2>हम क्यों हैं सबसे अलग?</h2>
+    <p>हर बच्चे का सर्वांगीण विकास हमारा लक्ष्य है</p>
+    <div class="divider"></div>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📖</div>
+      <h3>विशेष अतिरिक्त कक्षाएं</h3>
+      <p>कमजोर छात्र-छात्राओं के लिए अलग और विशेष कक्षाओं की व्यवस्था ताकि कोई बच्चा पीछे न रहे।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏡</div>
+      <h3>घर जैसा वातावरण</h3>
+      <p>बच्चों की मानसिक शांति के लिए घर जैसा माहौल दिया जाता है जिससे वे खुशी से पढ़ाई करें।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🪔</div>
+      <h3>सांस्कृतिक शिक्षा</h3>
+      <p>बच्चों को संस्कृति, संस्कार और नैतिक मूल्यों की उचित शिक्षा दी जाती है।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>होमवर्क व ट्यूशन</h3>
+      <p>बच्चों का होमवर्क पूर्ण कराने और ट्यूशन की संपूर्ण व्यवस्था की जाती है।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌐</div>
+      <h3>द्विभाषी शिक्षण</h3>
+      <p>हिंदी एवं अंग्रेजी दोनों माध्यमों से शिक्षण की सुविधा उपलब्ध है।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💻</div>
+      <h3>कंप्यूटर शिक्षा</h3>
+      <p>बच्चों को डिजिटल युग के लिए तैयार करने हेतु कंप्यूटर शिक्षा की उचित व्यवस्था है।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🍽️</div>
+      <h3>चार बार भोजन</h3>
+      <p>बच्चों को दिन में चार बार पौष्टिक और स्वादिष्ट भोजन दिया जाता है।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚽</div>
+      <h3>खेलकूद गतिविधियां</h3>
+      <p>बच्चों के सर्वांगीण विकास हेतु खेलकूद तथा अन्य आवश्यक कार्यक्रमों की व्यवस्था है।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>प्रतियोगी परीक्षा तैयारी</h3>
+      <p>प्रतियोगी परीक्षाओं हेतु क्रमिक तैयारी की उत्तम व्यवस्था की जाती है।</p>
+    </div>
+  </div>
+</section>
+
+<!-- Admission -->
+<section class="admission" id="admission">
+  <div class="admission-grid">
+    <div>
+      <h2>प्रवेश अभी खुला है!</h2>
+      <p>अपने बच्चे के उज्जवल भविष्य के लिए आज ही संपर्क करें। हमारे यहाँ गरीब से गरीब बच्चे को भी शिक्षा का पूरा अधिकार है।</p>
+      <ul class="admission-points">
+        <li>कोई भी बच्चा अशिक्षित न रहे — यही हमारा उद्देश्य है</li>
+        <li>बहुत गरीब परिवार के लड़के-लड़कियों की फीस में ₹50/माह तक की छूट</li>
+        <li>गरीब लड़कियों को संस्था द्वारा निःशुल्क शिक्षा की व्यवस्था</li>
+        <li>बेड, टॉयलेट, भोजन आदि होस्टल द्वारा निःशुल्क उपलब्ध</li>
+        <li>बच्चों को केवल दो जोड़ी कपड़े लेकर आना है</li>
+      </ul>
+      <a href="tel:8962617340" class="btn btn-white" style="font-size:16px;">📞 अभी संपर्क करें — 8962617340</a>
+    </div>
+    <div class="admission-card">
+      <div class="open-badge">ADMISSION OPEN</div>
+      <h3>प्रवेश चल रहा है</h3>
+      <div class="class-range">कक्षा<br>1 से 10</div>
+      <div class="medium">हिंदी एवं अंग्रेजी माध्यम</div>
+      <a href="tel:8962617340" class="phone-big">📞 8962617340</a>
+      <p style="margin-top:15px; font-size:13px; color:#888;">ऑफिस नंबर — कभी भी कॉल करें</p>
+    </div>
+  </div>
+</section>
+
+<!-- Facilities -->
+<section class="facilities" id="facilities">
+  <div class="section-title">
+    <div class="tag">निःशुल्क सुविधाएं</div>
+    <h2>होस्टल द्वारा निःशुल्क प्रदान की जाने वाली सुविधाएं</h2>
+    <p>सभी आधुनिक सुविधाएं आधुनिक समय के अनुसार उपलब्ध</p>
+    <div class="divider"></div>
+  </div>
+  <div class="facilities-grid">
+    <div class="facility-item">
+      <span class="fi-icon">🛏️</span>
+      <h3>बेड की व्यवस्था</h3>
+      <p>आरामदायक बेड निःशुल्क उपलब्ध</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">🍱</span>
+      <h3>पौष्टिक भोजन</h3>
+      <p>दिन में चार बार पौष्टिक भोजन</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">🚿</span>
+      <h3>स्नानघर / शौचालय</h3>
+      <p>साफ-सुथरे टॉयलेट की व्यवस्था</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">📚</span>
+      <h3>पुस्तकालय</h3>
+      <p>किताबें और अध्ययन सामग्री</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">🏥</span>
+      <h3>स्वास्थ्य देखभाल</h3>
+      <p>बच्चों की सेहत का पूरा ख्याल</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">🔒</span>
+      <h3>पूर्ण सुरक्षा</h3>
+      <p>24 घंटे सुरक्षित वातावरण</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">💡</span>
+      <h3>बिजली व पानी</h3>
+      <p>निर्बाध बिजली और स्वच्छ पानी</p>
+    </div>
+    <div class="facility-item">
+      <span class="fi-icon">🎨</span>
+      <h3>रचनात्मक गतिविधियां</h3>
+      <p>कला, संगीत व अन्य गतिविधियां</p>
+    </div>
+  </div>
+</section>
+
+<!-- Notes -->
+<section class="notes" id="notes">
+  <h2>⚠️ महत्वपूर्ण जानकारी</h2>
+  <div class="notes-grid">
+    <div class="note-card">
+      <span class="note-icon">🎯</span>
+      <p>हमारा उद्देश्य है कि <strong>कोई भी बच्चा अशिक्षित न रहे</strong>। गरीब से गरीब परिवार के बच्चे को भी शिक्षा का अधिकार है।</p>
+    </div>
+    <div class="note-card">
+      <span class="note-icon">💰</span>
+      <p>यदि लड़का-लड़की की माता-पिता की आर्थिक स्थिति बहुत कमजोर है, तो फीस में <strong>₹50 प्रतिमाह</strong> तक की छूट दी जाएगी।</p>
+    </div>
+    <div class="note-card">
+      <span class="note-icon">👩‍🎓</span>
+      <p>यदि कोई गरीब लड़की शिक्षा प्राप्त करना चाहती है, तो संस्था द्वारा उन्हें <strong>निःशुल्क शिक्षा</strong> दी जाएगी। ऑफिस से संपर्क करें।</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div>
+      <h2>📞 संपर्क करें</h2>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div class="ci-text">
+            <strong>ऑफिस नंबर</strong>
+            <a href="tel:8962617340">8962617340</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">👤</div>
+          <div class="ci-text">
+            <strong>संचालक</strong>
+            <span>श्रीयांश असाटी (तालमगढ़ वाले)</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text">
+            <strong>मोबाइल नंबर</strong>
+            <a href="tel:6266971240">6266971240</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div class="ci-text">
+            <strong>पता</strong>
+            <span>RTO के पास, मउरोड, टीकमगढ़ (म.प्र.)</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📸</div>
+          <div class="ci-text">
+            <strong>Instagram</strong>
+            <span>@sanskar_kanya_sanskrati_hostel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map-placeholder">
+      <span class="map-icon">📍</span>
+      <p><strong>RTO के पास, मउरोड</strong><br>टीकमगढ़, मध्य प्रदेश<br><br>दिशा जानने के लिए Google Maps पर<br>"Sanskar Kanya Hostel Tikamgarh" खोजें</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 संस्कार कन्या संस्कृति होस्टल, टीकमगढ़ (म.प्र.) — सर्वाधिकार सुरक्षित</p>
+  <div class="social">📸 Instagram: <span>@sanskar_kanya_sanskrati_hostel</span></div>
+</footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Animate stats on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.feature-card, .facility-item, .note-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+
+  // Nav active state on scroll
+  const sections = document.querySelectorAll('section[id], .stats');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 100;
+    document.querySelectorAll('nav a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href.startsWith('#')) return;
+      const section = document.querySelector(href);
+      if (section && section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+        link.style.color = 'var(--gold)';
+      } else {
+        link.style.color = '';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
